@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Landscape</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        .sky {
+            background: linear-gradient(to top, #88d9e6 0%, #a0e8ff 100%);
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sun {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            right: 100px;
+            box-shadow: 0 0 40px 10px yellow;
+        }
+
+        .mountain,
+        .mountain2 {
+            position: absolute;
+            bottom: 150px;
+            width: 0;
+            height: 0;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+        }
+
+        .mountain {
+            border-bottom: 300px solid #888888;
+            /* rocky gray */
+            left: 100px;
+        }
+
+        .mountain2 {
+            border-bottom: 300px solid #aaaaaa;
+            /* lighter gray */
+            left: 300px;
+            bottom: 130px;
+            transform: scale(1.2);
+        }
+
+        /* Snow caps */
+        .mountain::after,
+        .mountain2::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50px;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 60px solid white;
+        }
+
+        .grass {
+            background: #228B22;
+            height: 150px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .tree {
+            position: absolute;
+            bottom: 20px;
+            left: 60px;
+        }
+
+        .trunk {
+            width: 20px;
+            height: 60px;
+            background: #8b4513;
+            margin: 0 auto;
+        }
+
+        .leaves {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 70px solid green;
+            margin: -10px auto 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sky">
+        <div class="sun"></div>
+        <div class="mountain"></div>
+        <div class="mountain mountain2"></div>
+        <div class="grass">
+            <div class="tree">
+                <div class="trunk"></div>
+                <div class="leaves"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
