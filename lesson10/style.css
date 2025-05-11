@@ -1,0 +1,62 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+    color: rgb(220, 227, 224);
+}
+
+h1{
+    color: antiquewhite;
+}
+
+/* Attribute selector */
+a{
+    color: bisque;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+}
+
+/*Child selector*/
+ul > li {
+    font-weight: bold;
+}
+
+/*Sibling selector*/
+h1 + p {
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+/* hover pseudo-class */
+ul li:hover {
+    color: bisque;
+}
+
+/* :nth-child(n) Pseudo-class */
+ul li:nth-child(3) {
+    background-color: #21262D;
+}
+
+/* :not(selector) Pseudo-class */
+p:not(:first-of-type) {
+    text-decoration: underline;
+}
+
+/* ::before Pseudo-element */
+ul li::before {
+    content: "🚀 ";
+}
+
+/* ::after Pseudo-element */
+a::after {
+    content: " 🌌";
+}
+
+/* ::first-letter Pseudo-element */
+p::first-letter {
+    font-size: 200%;
+    color: #FF7B72;
+}
