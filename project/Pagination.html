@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple Pagination Styles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Style 2: Colorful Rounded Pagination */
+        .colorful-pagination .page-link {
+            border-radius: 50px;
+            margin: 0 5px;
+            color: #007bff;
+            border-color: #007bff;
+            transition: 0.3s;
+        }
+        .colorful-pagination .page-item.active .page-link {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        .colorful-pagination .page-link:hover {
+            background-color: #e7f3ff;
+        }
+        /* Style 3: Dark Themed Pagination */
+        .dark-pagination .page-link {
+            background-color: #343a40;
+            color: #ffffff;
+            border-color: #343a40;
+            margin: 0 2px;
+            transition: background-color 0.3s;
+        }
+        .dark-pagination .page-item.active .page-link {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: black;
+        }
+        .dark-pagination .page-link:hover {
+            background-color: #495057;
+        }
+        /* Style 4: Underlined Pagination */
+        .underline-pagination .page-link {
+            border: none;
+            border-bottom: 2px solid transparent;
+            border-radius: 0;
+            color: #000;
+            margin: 0 5px;
+            padding: 8px 12px;
+            transition: border-color 0.3s;
+        }
+        .underline-pagination .page-link:hover {
+            border-color: #007bff;
+    }
+        .underline-pagination .page-item.active .page-link {
+            border-bottom: 2px solid #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="container py-5">
+    <!-- Style 1: Default Bootstrap Pagination -->
+    <h4>1️⃣ Default Bootstrap Pagination</h4>
+    <nav>
+        <ul class="pagination">
+            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
+    <!-- Style 2: Colorful Rounded Pagination -->
+    <h4 class="mt-5">2️⃣ Colorful Rounded Pagination</h4>
+    <nav>
+        <ul class="pagination colorful-pagination">
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
+    <!-- Style 3: Flat Dark-Themed Pagination -->
+    <h4 class="mt-5">3️⃣ Dark-Themed Pagination</h4>
+    <nav>
+        <ul class="pagination dark-pagination">
+            <li class="page-item"><a class="page-link" href="#">«</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">»</a></li>
+        </ul>
+    </nav>
+    <!-- Style 4: Underlined Minimal Pagination -->
+    <h4 class="mt-5">4️⃣ Underlined Minimal Pagination</h4>
+    <nav>
+        <ul class="pagination underline-pagination">
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
